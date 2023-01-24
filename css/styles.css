@@ -9,11 +9,19 @@
 }
 html,
 body {
+  gap: 2rem;
   height: 100%;
   font-size: 15px;
+  font-weight: 400;
   font-family: "Overpass", sans-serif;
 }
 body {
+  background-color: hsl(216, 12%, 8%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -46,24 +54,127 @@ h6 {
 }
 /* ---------- CSS RESET ---------- */
 
+/* ---------- RATING STATE ---------- */
 .card-container {
+  background-color: hsl(213, 19%, 18%);
   display: flex;
+  color: hsl(0, 0%, 100%);
   flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  width: 24rem;
+  height: 26rem;
+  border-radius: 20px;
+  /* display: none; */
+}
+
+.star-icon {
+  background-color: hsl(216, 12%, 54%, 10%);
+  padding: 1rem;
+  border-radius: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  margin-bottom: 1.5rem;
+  color: hsl(217, 12%, 63%);
+}
+
+.number-list {
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0 auto;
-  position: relative;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.number {
+  background-color: hsl(216, 12%, 54%, 10%);
+  color: hsl(217, 12%, 63%);
+  text-align: center;
+  line-height: 3.2rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 100%;
+}
+
+.number:hover {
+  cursor: pointer;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+.btn-submit {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  border: none;
+  width: 100%;
+  border-radius: 999px;
+  line-height: 2.8rem;
+  height: 2.8rem;
+  transition: all 0.3s;
+}
+
+.btn-submit:hover {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(0, 0%, 100%);
+  font-weight: 700;
 }
 
 .attribution {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 2rem;
+  color: hsl(0, 0%, 100%);
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(0, 45%, 44%);
+}
+/* ---------- RATING CARD ---------- */
+
+/* ---------- THANK YOU STATE ---------- */
+.thanks-container {
+  background-color: hsl(213, 19%, 18%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: hsl(0, 0%, 100%);
+  padding: 2rem;
+  width: 24rem;
+  height: 26rem;
+  border-radius: 20px;
+  /* display: none; */
+}
+
+.thanks-img {
+  margin-bottom: 2rem;
+}
+
+.thanks-rating {
+  margin-bottom: 1.8rem;
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(216, 12%, 54%, 10%);
+  padding: 0.4rem 0.9rem 0.4rem 0.9rem;
+  border-radius: 20px;
+}
+
+.thanks-title {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.thanks-text {
+  color: hsl(217, 12%, 63%);
+  text-align: center;
 }
