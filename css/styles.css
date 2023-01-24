@@ -9,7 +9,6 @@
 }
 html,
 body {
-  gap: 2rem;
   height: 100%;
   font-size: 15px;
   font-weight: 400;
@@ -177,4 +176,9 @@ h6 {
 .thanks-text {
   color: hsl(217, 12%, 63%);
   text-align: center;
+}
+
+main {
+  display: flex;
+  gap: 2rem;
 }
