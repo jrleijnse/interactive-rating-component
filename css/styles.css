@@ -91,7 +91,6 @@ h6 {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
-  overflow: hidden;
 }
 
 .number {
@@ -181,4 +180,8 @@ h6 {
 main {
   display: flex;
   gap: 2rem;
+}
+
+.selectedRating {
+  background-color: hsl(217, 12%, 63%);
 }
