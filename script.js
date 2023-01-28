@@ -8,10 +8,12 @@ let selectedNumber = undefined;
 
 // Remove active number state when clicking somewhere on the page
 document.addEventListener("click", function (event) {
-  if (!event.target.matches(".number"))
+  if (!event.target.matches(".number")) {
     numberList
       .querySelectorAll(".active-number")
       .forEach((e) => e.classList.remove("active-number"));
+    selectedNumber = undefined;
+  }
 });
 
 // Add active number state when clicking on a number
