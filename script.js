@@ -16,8 +16,6 @@ numberList.addEventListener("click", function (e) {
       numberList
         .querySelectorAll(".active-number")
         .forEach((e) => e.classList.remove("active-number"));
-
-    console.log(event.target);
   });
 
   if (e.target.classList.contains("number")) {
