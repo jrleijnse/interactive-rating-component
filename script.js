@@ -10,11 +10,14 @@ numberList.addEventListener("click", function (e) {
   selectedNumber = e.target.getAttribute("data-rating");
   const number = e.target;
 
-  numberList
-    .querySelectorAll(".active-number")
-    .forEach((e) => e.classList.remove("active-number"));
-  number.classList.add("active-number");
-  numberList.classList.remove("active-number");
+  if (e.target.classList.contains("number-list")) return;
+
+  if (e.target.classList.contains("number")) {
+    numberList
+      .querySelectorAll(".active-number")
+      .forEach((e) => e.classList.remove("active-number"));
+    number.classList.add("active-number");
+  }
 });
 
 btnSubmit.addEventListener("click", function () {
