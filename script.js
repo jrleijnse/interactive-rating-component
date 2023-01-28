@@ -6,7 +6,7 @@ const thanksRating = document.querySelector(".thanks-rating");
 
 let selectedNumber = undefined;
 
-// Remove active number when clicking somewhere on the page
+// Remove active number state when clicking somewhere on the page
 document.addEventListener("click", function (event) {
   if (!event.target.matches(".number"))
     numberList
