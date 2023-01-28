@@ -64,7 +64,6 @@ h6 {
   width: 24rem;
   height: 26rem;
   border-radius: 20px;
-  /* display: none; */
 }
 
 .star-icon {
@@ -152,7 +151,6 @@ h6 {
   width: 24rem;
   height: 26rem;
   border-radius: 20px;
-  /* display: none; */
 }
 
 .thanks-img {
@@ -177,11 +175,13 @@ h6 {
   text-align: center;
 }
 
-main {
-  display: flex;
-  gap: 2rem;
+/* ---------- HELPER CLASSES ---------- */
+
+.hidden {
+  display: none;
 }
 
-.selectedRating {
+.active-number {
+  color: hsl(0, 0%, 100%);
   background-color: hsl(217, 12%, 63%);
 }
