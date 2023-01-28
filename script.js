@@ -10,7 +10,15 @@ numberList.addEventListener("click", function (e) {
   selectedNumber = e.target.getAttribute("data-rating");
   const number = e.target;
 
-  if (e.target.classList.contains("number-list")) return;
+  document.addEventListener("click", function (event) {
+    // If the clicked element doesn't have the right selector, bail
+    if (!event.target.matches(".number"))
+      numberList
+        .querySelectorAll(".active-number")
+        .forEach((e) => e.classList.remove("active-number"));
+
+    console.log(event.target);
+  });
 
   if (e.target.classList.contains("number")) {
     numberList
