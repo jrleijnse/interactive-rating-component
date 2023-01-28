@@ -6,17 +6,17 @@ const thanksRating = document.querySelector(".thanks-rating");
 
 let selectedNumber = undefined;
 
+document.addEventListener("click", function (event) {
+  // If the clicked element doesn't have the right selector, bail
+  if (!event.target.matches(".number"))
+    numberList
+      .querySelectorAll(".active-number")
+      .forEach((e) => e.classList.remove("active-number"));
+});
+
 numberList.addEventListener("click", function (e) {
   selectedNumber = e.target.getAttribute("data-rating");
   const number = e.target;
-
-  document.addEventListener("click", function (event) {
-    // If the clicked element doesn't have the right selector, bail
-    if (!event.target.matches(".number"))
-      numberList
-        .querySelectorAll(".active-number")
-        .forEach((e) => e.classList.remove("active-number"));
-  });
 
   if (e.target.classList.contains("number")) {
     numberList
