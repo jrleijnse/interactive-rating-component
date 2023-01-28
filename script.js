@@ -6,14 +6,15 @@ const thanksRating = document.querySelector(".thanks-rating");
 
 let selectedNumber = undefined;
 
+// Remove active number when clicking somewhere on the page
 document.addEventListener("click", function (event) {
-  // If the clicked element doesn't have the right selector, bail
   if (!event.target.matches(".number"))
     numberList
       .querySelectorAll(".active-number")
       .forEach((e) => e.classList.remove("active-number"));
 });
 
+// Add active number state when clicking on a number
 numberList.addEventListener("click", function (e) {
   selectedNumber = e.target.getAttribute("data-rating");
   const number = e.target;
@@ -26,6 +27,7 @@ numberList.addEventListener("click", function (e) {
   }
 });
 
+// Alert if no number is selected, otherwise show thank you page with selected number
 btnSubmit.addEventListener("click", function () {
   if (!selectedNumber) alert("Please select a number");
   if (selectedNumber) {
