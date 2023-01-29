@@ -28,7 +28,7 @@ numbers.forEach((number) => {
 
 // Remove active number state when clicking somewhere on the page
 document.addEventListener("click", function (e) {
-  if (!e.target.matches(".number")) {
+  if (!e.target.matches(".active-number")) {
     numbers.forEach((e) => e.classList.remove("active-number"));
     selectedNumber = undefined;
   }
