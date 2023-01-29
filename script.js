@@ -10,7 +10,7 @@ let selectedNumber = undefined;
 // Add active number state when clicking on a number
 numbers.forEach((number) => {
   number.addEventListener("click", function (e) {
-    // Track number to display in thank you form
+    // Track selected number to display in thank you form
     selectedNumber = e.target.getAttribute("data-rating");
 
     // Toggle active number state
